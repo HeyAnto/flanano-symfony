@@ -3,5 +3,25 @@
 {% block title %}Flanano - Magasin{% endblock %}
 
 {% block main %}
+<section class="category-container flex flex-column align-item-center">
+    <div class="flex flex-column gap-10">
+        <h2>Les produits exceptionnels de
+            <span>
+                <img src="{{ asset('logo.svg') }}" alt="Logo Flanano">
+            </span>
+        </h2>
+        <p>Découvrez l’univers de Flanano,
+            où l’élégance et le style se rencontrent pour sublimer votre quotidien.
+            Chaque produit est choisi avec soin pour vous offrir le meilleur de la mode et de la beauté ✨
+        </p>
+    </div>
+</section>
 
+<section class="product-grid">
+    {% for product in products %}
+    {% include "_components/card.html.twig" %}
+    {% else %}
+    <p>Aucun produit disponible.</p>
+    {% endfor %}
+</section>
 {% endblock %}

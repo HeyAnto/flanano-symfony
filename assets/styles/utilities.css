@@ -16,8 +16,16 @@
 }
 
 /* Gap */
+.gap-10 {
+  gap: 0.625rem;
+}
+
 .gap-20 {
   gap: 1.25rem;
+}
+
+.gap-100 {
+  gap: 6.25rem;
 }
 
 /* Justify */
@@ -37,10 +45,31 @@
 
 /* Media Query */
 @media screen and (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-logo {
+    transform: scale(1.08) translateY(40px);
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-logo {
+    transform: scale(1.08) translateY(30px);
+  }
 }
 
 @media screen and (max-width: 425px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-logo {
+    transform: scale(1.13) translateY(20px);
+  }
 }
