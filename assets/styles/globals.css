@@ -8,17 +8,11 @@
 
 :root {
   /* Primary Color */
-  --color-dark: #06080d;
+  --color-dark: #000000;
   --color-white: #ffffff;
-  --color-grey-dark: #898f9c;
-  --color-grey-light: #dbdbdb;
-  --color-blue: #004ecc;
-
-  /* Status Color */
-  --color-status-success-strong: #4caf50;
-  --color-status-success: #ddffdd;
-  --color-status-danger-strong: #f44336;
-  --color-status-danger: #ffdddd;
+  --color-grey: #868686;
+  --color-text-grey: #cdcdcd;
+  --color-light-grey: #f4f4f4;
 
   /* Font Family */
   --font-family: "BDO Grotesk", "Arial", sans-serif;
@@ -27,13 +21,12 @@
 
   /* Tailles de police */
   --font-size-p: 1rem;
-  --font-size-h1: 2rem;
-  --font-size-h2: 1.5rem;
-  --font-size-h3: 1.25rem;
+  --font-size-h1: 1.5rem;
+  --font-size-h2: 1.25rem;
 
   /* Line heights */
-  --line-height-small: 1.2;
-  --line-height-normal: 1.6;
+  --line-height-p: 1.25rem;
+  --line-height-h: 1.5625rem;
 }
 
 /* Font Style */
@@ -45,7 +38,7 @@ h5,
 h6 {
   font-family: var(--font-family);
   font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-small);
+  line-height: var(--line-height-h);
   color: var(--color-dark);
 }
 
@@ -57,14 +50,10 @@ h2 {
   font-size: var(--font-size-h2);
 }
 
-h3 {
-  font-size: var(--font-size-h3);
-}
-
 p {
   font-size: var(--font-size-p);
   font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-normal);
+  line-height: var(--line-height-p);
 }
 
 /* Layout */
@@ -72,6 +61,10 @@ p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-p);
 }
 
 html {
@@ -82,24 +75,21 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 50px;
 
   color: var(--color-dark);
   background-color: var(--color-white);
-
-  font-family: var(--font-family);
-  font-size: var(--font-size-p);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-normal);
 }
 
 main {
+  min-width: 1920px;
+  width: 100%;
   flex: 1;
 }
 
 /* Reset */
 a {
   text-decoration: none;
+  color: var(--color-dark);
 }
 
 button {

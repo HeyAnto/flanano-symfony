@@ -15,6 +15,11 @@
   flex-wrap: wrap;
 }
 
+/* Gap */
+.gap-20 {
+  gap: 1.25rem;
+}
+
 /* Justify */
 .justify-center {
   justify-content: center;
@@ -25,6 +30,11 @@
   justify-content: space-between;
 }
 
+/* Align */
+.align-item-center {
+  align-items: center;
+}
+
 /* Media Query */
 @media screen and (max-width: 1024px) {
 }
@@ -33,7 +43,4 @@
 }
 
 @media screen and (max-width: 425px) {
-  body {
-    padding: 10px;
-  }
 }
