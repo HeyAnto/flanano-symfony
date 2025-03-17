@@ -17,7 +17,12 @@
     </div>
 </section>
 
-{% include '_components/scrolling_text.html.twig' with { message: 'Nouveau look fashion avec Flanano' } %}
+<a href="{{ path('shop_index') }}">
+    {% include '_components/scrolling_text.html.twig' with {
+    message: 'Nouveau makeup Flavedo & Albedo !',
+    messageColor: 'bg-yellow'
+    } %}
+</a>
 
 <section class="product-grid">
     {% for product in products %}

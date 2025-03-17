@@ -1,5 +1,33 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
+<section class="hero-container">
+    <a href="{{ path('shop_index') }}">
+        <div class="hero-column">
+            <img src="{{ asset('images/hero/img1.webp') }}" alt="Hero image" class="hero-image" id="left-image">
+        </div>
+    </a>
+    <a href="{{ path('shop_index') }}">
+        <div class="hero-column">
+            <img src="{{ asset('images/hero/img16.webp') }}" alt="Hero image" class="hero-image" id="right-image">
+        </div>
+    </a>
+
+    <script type="text/javascript">
+        window.heroImages = [
+            {% for i in 1..35 %}
+        "{{ asset('images/hero/img' ~ i ~ '.webp') }}"{% if not loop.last %}, {% endif %}
+        {% endfor %}
+        ];
+    </script>
+    <script src="{{ asset('js/hero.js') }}" defer></script>
+</section>
+
+<a href="{{ path('shop_index') }}">
+    {% include '_components/scrolling_text.html.twig' with {
+    message: 'Nouveau look fashion Odyssey 🪐',
+    messageColor: 'bg-dark'
+    } %}
+</a>
 
 {% endblock %}
