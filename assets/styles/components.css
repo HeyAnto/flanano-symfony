@@ -135,6 +135,10 @@ footer a:hover {
   white-space: nowrap;
 }
 
+.message-container:hover {
+  opacity: 0.9;
+}
+
 /* Section Message Scroll */
 .scrolling-text {
   width: max-content;
