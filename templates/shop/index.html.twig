@@ -5,7 +5,7 @@
 {% block main %}
 <section class="category-container flex flex-column align-item-center">
     <div class="flex flex-column gap-10">
-        <h2>Les produits exceptionnels de
+        <h2>Tous les produits exceptionnels de
             <span>
                 <img src="{{ asset('logo.svg') }}" alt="Logo Flanano">
             </span>
@@ -16,6 +16,8 @@
         </p>
     </div>
 </section>
+
+{% include '_components/scrolling_text.html.twig' with { message: 'Nouveau look fashion avec Flanano' } %}
 
 <section class="product-grid">
     {% for product in products %}

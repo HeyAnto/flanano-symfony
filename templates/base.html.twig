@@ -11,14 +11,17 @@
 
     {% block javascripts %}
     {% block importmap %}{{ importmap('app') }}{% endblock %}
+    <script src="{{ asset('js/burger-menu.js') }}" defer></script>
     {% endblock %}
 </head>
 
 <body>
     {% include "_components/header.html.twig" %}
+
     <main>
         {% block main %}{% endblock %}
     </main>
+
     {% include "_components/footer.html.twig" %}
 </body>
 

@@ -1,32 +1,30 @@
-<header class="flex justify-center">
-    <div class="header-container flex align-item-center">
-        <div class="header-logo">
-            <a href="{{ path('home_index') }}"
-                class="{{ app.request.attributes.get('_route') == 'home_index' ? 'active' : '' }}">
-                <img src="{{ asset('logo.svg') }}" alt="Logo Flanano">
-            </a>
+<header class="header">
+    <div class="header-container flex items-center justify-between">
+        <div class="flex">
+            <div class="header-logo">
+                <a href="{{ path('home_index') }}"
+                    class="{{ app.request.attributes.get('_route') == 'home_index' ? 'active' : '' }}">
+                    <img src="{{ asset('logo.svg') }}" alt="Logo Flanano">
+                </a>
+            </div>
+
+            <nav id="main-nav" class="flex gap-20">
+                <a href="{{ path('shop_index') }}"
+                    class="{{ app.request.attributes.get('_route') == 'shop_index' ? 'active' : '' }}">Tout</a>
+                <a href="{{ path('shop_index') }}"
+                    class="{{ app.request.attributes.get('_route') == 'shop_makeup' ? 'active' : '' }}">Makeup</a>
+                <a href="{{ path('shop_index') }}"
+                    class="{{ app.request.attributes.get('_route') == 'shop_sunglasses' ? 'active' : '' }}">Lunettes</a>
+                <a href="{{ path('shop_index') }}"
+                    class="{{ app.request.attributes.get('_route') == 'shop_watches' ? 'active' : '' }}">Montres</a>
+                <a href="{{ path('shop_index') }}"
+                    class="{{ app.request.attributes.get('_route') == 'shop_odyssey' ? 'active' : '' }}">Odyssey 25</a>
+            </nav>
         </div>
-        <nav class="flex gap-20">
-            <a href="{{ path('shop_index') }}"
-                class="{{ app.request.attributes.get('_route') == 'shop_index' ? 'active' : '' }}">
-                Tout
-            </a>
-            <a href="{{ path('shop_index') }}"
-                class="{{ app.request.attributes.get('_route') == 'shop_makeup' ? 'active' : '' }}">
-                Makeup
-            </a>
-            <a href="{{ path('shop_index') }}"
-                class="{{ app.request.attributes.get('_route') == 'shop_sunglasses' ? 'active' : '' }}">
-                Lunettes
-            </a>
-            <a href="{{ path('shop_index') }}"
-                class="{{ app.request.attributes.get('_route') == 'shop_watches' ? 'active' : '' }}">
-                Montres
-            </a>
-            <a href="{{ path('shop_index') }}"
-                class="{{ app.request.attributes.get('_route') == 'shop_odyssey' ? 'active' : '' }}">
-                Odyssey 25
-            </a>
-        </nav>
+
+        <button id="burger-btn" class="burger-btn" aria-label="Menu" type="button">
+            <img id="burger-icon" src="{{ asset('icons/icon-burger.svg') }}" alt="Menu">
+            <img id="close-icon" src="{{ asset('icons/icon-close.svg') }}" alt="Fermer" class="hidden">
+        </button>
     </div>
 </header>
