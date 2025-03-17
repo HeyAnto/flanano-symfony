@@ -37,4 +37,20 @@
     {% endfor %}
 </section>
 
+<a href="{{ path('shop_product_show', {'id' : 3}) }}">
+    {% include '_components/scrolling_text.html.twig' with {
+    message: 'Nouveau eyeliner Flavedo & Albedo ✏️',
+    messageColor: 'bg-purple'
+    } %}
+</a>
+
+<section class="hero-container">
+    <div class="home-image">
+        <img src="{{ asset('images/home/pencil.webp') }}" alt="Pencil">
+    </div>
+    <div class="home-image">
+        <img src="{{ asset('images/home/face.webp') }}" alt="Face">
+    </div>
+</section>
+
 {% endblock %}

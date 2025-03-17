@@ -87,6 +87,11 @@
 }
 
 @media screen and (max-width: 1024px) {
+  /* Home Image */
+  .home-image {
+    max-height: 500px;
+  }
+
   /* Section Category */
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -141,6 +146,11 @@
     display: none;
   }
 
+  /* Home Image */
+  .home-image {
+    max-height: 800px;
+  }
+
   /* Section Category */
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -156,6 +166,11 @@
   /* Section Hero */
   .hero-column {
     height: 50vh;
+  }
+
+  /* Home Image */
+  .home-image {
+    max-height: 400px;
   }
 
   /* Section Category */
