@@ -113,6 +113,11 @@ a {
   color: var(--color-dark);
 }
 
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
 button {
   background-color: none;
   border: none;

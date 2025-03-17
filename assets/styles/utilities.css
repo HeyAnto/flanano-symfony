@@ -79,6 +79,13 @@
 }
 
 /* Media Query */
+@media screen and (min-width: 2560px) {
+  /* Section Hero */
+  .hero-column {
+    height: 50vh;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   /* Section Category */
   .product-grid {
@@ -130,7 +137,7 @@
     grid-template-columns: 1fr;
   }
 
-  .hero-column:nth-child(2) {
+  .hero-container a:nth-child(2) {
     display: none;
   }
 
@@ -148,7 +155,7 @@
 @media screen and (max-width: 425px) {
   /* Section Hero */
   .hero-column {
-    height: 70vh;
+    height: 50vh;
   }
 
   /* Section Category */
