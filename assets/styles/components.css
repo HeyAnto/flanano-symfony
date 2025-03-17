@@ -206,6 +206,7 @@ footer a:hover {
 
 .show-right-info {
   padding: 40px;
+  border-bottom: solid 1px var(--color-text-grey);
 }
 
 .check-icon {
@@ -214,25 +215,38 @@ footer a:hover {
 }
 
 /* Show Accordion */
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
+.accordion-container {
+  border-bottom: solid 1px var(--color-text-grey);
 }
 
-.active-accordion,
+.accordion {
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  cursor: pointer;
+  text-align: left;
+  padding: 20px 40px;
+  width: 100%;
+}
+
 .accordion:hover {
-  background-color: #ccc;
+  color: var(--color-grey);
+}
+
+.accordion:after {
+  content: "\02795";
+  font-size: 10px;
+  color: var(--color-dark);
+  float: right;
+  margin-left: 5px;
+}
+
+.active-accordion:after {
+  content: "\2796";
 }
 
 .panel {
-  padding: 0 18px;
+  padding: 0px 40px 20px 40px;
+  color: var(--color-grey);
   background-color: white;
   display: none;
   overflow: hidden;
@@ -251,5 +265,6 @@ footer a:hover {
 
 .btn-add-cart:hover {
   opacity: 0.9;
+  color: var(--color-purple);
   transform: scale(1.01);
 }

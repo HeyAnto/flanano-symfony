@@ -6,10 +6,12 @@ for (i = 0; i < acc.length; i++) {
     this.classList.toggle("active-accordion");
 
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
+    if ((panel.style.display === "flex", panel.style.maxHeight)) {
       panel.style.display = "none";
+      panel.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
+      panel.style.display = "flex";
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
 }

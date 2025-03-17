@@ -5,7 +5,7 @@
 {% block main %}
 <section class="show-grid">
     <img src="{{ asset(product.cover) }}" alt="{{ product.title }}">
-    <div class="show-right flex flex-column gap-50">
+    <div class="show-right flex flex-column">
         <div class="show-right-info flex flex-column gap-100">
             <div class="flex flex-column gap-20">
                 <h1>{{ product.title }}</h1>
@@ -41,10 +41,28 @@
             </div>
         </div>
 
-        <div>
+        <div class="accordion-container flex flex-column gap-10">
             <button class="accordion">Description</button>
             <div class="panel">
-                <p>Lorem ipsum...</p>
+                <p>{{ product.description }}</p>
+            </div>
+        </div>
+
+        <div class="accordion-container flex flex-column gap-10">
+            <button class="accordion">Expédition et retours</button>
+            <div class="panel flex-column gap-10">
+                <p>Délai de livraison :</p>
+                <ul>
+                    <li>Europe de l'Ouest : 1 - 3 jours</li>
+                    <li>Reste de l'Europe : 3 - 5 jours</li>
+                    <li>Autres pays : 3 - 6 jours</li>
+                </ul>
+                <p>
+                    Livraison gratuite pour les commandes supérieures à 60 €.
+                    Retours possibles dans les 30 jours suivant l'achat.</p>
+                <p>
+                    Vous pouvez en savoir plus sur notre politique de livraison et de retour sur les pages de service.
+                </p>
             </div>
         </div>
     </div>
