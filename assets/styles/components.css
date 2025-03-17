@@ -202,6 +202,8 @@ footer a:hover {
 
 .show-grid img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .show-right {

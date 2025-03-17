@@ -15,12 +15,17 @@ final class ShopController extends AbstractController
     {
         $products = $productRepository->findAll();
 
+        usort($products, function ($a, $b) {
+            return $a->getCategory()->getName() <=> $b->getCategory()->getName();
+        });
+
         return $this->render('shop/index.html.twig', [
             'products' => $products,
-            'title' => 'Tous les produits exceptionnels de ',
+            'title' => 'Tous les produits exceptionnels de Flanano',
             'description' => 'Découvrez l’univers de Flanano, où l’élégance et le style se rencontrent pour sublimer votre quotidien. Chaque produit est choisi avec soin pour vous offrir le meilleur de la mode et de la beauté ✨',
         ]);
     }
+
 
     #[Route('/makeup', name: 'shop_makeup')]
     public function makeup(ProductRepository $productRepository): Response
@@ -81,14 +86,18 @@ final class ShopController extends AbstractController
     #[Route('/product/{id}/{categoryId}', name: 'shop_product_show')]
     public function show(ProductRepository $productRepository, int $id, int $categoryId): Response
     {
-        $productLimit = 4;
-
         $product = $productRepository->find($id);
+
         $products = $productRepository->findBy(
             ['category' => $categoryId],
-            null,
-            $productLimit,
         );
+
+        $products = array_filter($products, fn($p) => $p->getId() !== $id);
+
+        shuffle($products);
+
+        $productLimit = 4;
+        $products = array_slice($products, 0, $productLimit);
 
         return $this->render('shop/show.html.twig', [
             'product' => $product,
