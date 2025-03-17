@@ -28,8 +28,9 @@
 
   /* Tailles de police */
   --font-size-p: 1rem;
-  --font-size-h1: 1.5rem;
-  --font-size-h2: 1.25rem;
+  --font-size-h1: 1.875rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
 
   /* Line heights */
   --line-height-p: 1.25rem;
@@ -119,6 +120,9 @@ img {
 }
 
 button {
-  background-color: none;
+  padding: 20px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
   border: none;
+  cursor: pointer;
 }

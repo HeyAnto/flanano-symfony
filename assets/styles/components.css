@@ -68,7 +68,7 @@ footer div {
 }
 
 footer a {
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h3);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-h);
   text-decoration: underline;
@@ -187,4 +187,69 @@ footer a:hover {
 
 .card-content {
   padding: 20px;
+}
+
+/* Product Show */
+.show-grid {
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  border-bottom: solid 1px var(--color-text-grey);
+}
+
+.show-grid img {
+  width: 100%;
+}
+
+.show-right {
+  border-left: solid 1px var(--color-text-grey);
+}
+
+.show-right-info {
+  padding: 40px;
+}
+
+.check-icon {
+  width: 16px !important;
+  height: 16px;
+}
+
+/* Show Accordion */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+/* Button */
+.btn-add-cart {
+  padding: 20px;
+  font-size: var(--font-size-h2);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-add-cart:hover {
+  opacity: 0.9;
+  transform: scale(1.01);
 }

@@ -83,8 +83,6 @@ final class ShopController extends AbstractController
     {
         $product = $productRepository->find($id);
 
-        dd($product);
-
         return $this->render('shop/show.html.twig', [
             'product' => $product
         ]);
