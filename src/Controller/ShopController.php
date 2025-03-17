@@ -6,6 +6,7 @@ use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 #[Route('/shop')]
 final class ShopController extends AbstractController
@@ -84,9 +85,17 @@ final class ShopController extends AbstractController
     }
 
     #[Route('/product/{id}/{categoryId}', name: 'shop_product_show')]
-    public function show(ProductRepository $productRepository, int $id, int $categoryId): Response
+    public function show(ProductRepository $productRepository, int $id = null, int $categoryId = null): Response
     {
+        if ($id === null || $categoryId === null) {
+            return $this->redirectToRoute('home_404');
+        }
+
         $product = $productRepository->find($id);
+
+        if (!$product) {
+            return $this->redirectToRoute('home_404');
+        }
 
         $products = $productRepository->findBy(
             ['category' => $categoryId],

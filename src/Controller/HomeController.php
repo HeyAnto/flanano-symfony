@@ -24,4 +24,10 @@ final class HomeController extends AbstractController
             'products' => $products
         ]);
     }
+
+    #[Route('/404', name: 'home_404')]
+    public function notFound(): Response
+    {
+        return $this->render('home/404.html.twig');
+    }
 }

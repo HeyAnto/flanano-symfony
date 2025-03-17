@@ -257,6 +257,19 @@ footer a:hover {
   overflow: hidden;
 }
 
+/* Section Notfound 404 */
+.notfound-container {
+  height: 100vh;
+  padding: 20px;
+  border-bottom: solid 1px var(--color-text-grey);
+  text-align: center;
+}
+
+.notfound-container a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
 /* Button */
 .btn-add-cart {
   padding: 20px;
