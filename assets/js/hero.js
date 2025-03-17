@@ -30,9 +30,9 @@ function initHero() {
   }, changeInterval / 2);
 }
 
-document.addEventListener("turbo:load", () => {
-  initHero();
-});
+document.addEventListener("turbo:load", initHero);
+document.addEventListener("turbo:render", initHero);
+document.addEventListener("DOMContentLoaded", initHero);
 
 document.addEventListener("DOMContentLoaded", () => {
   initHero();

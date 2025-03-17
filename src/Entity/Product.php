@@ -151,4 +151,9 @@ class Product
 
         return $this;
     }
+
+    public function getPriceTTC(): float
+    {
+        return $this->getPriceHT() * 1.20;
+    }
 }

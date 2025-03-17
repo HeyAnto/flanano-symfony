@@ -20,14 +20,21 @@
         {% endfor %}
         ];
     </script>
-    <script src="{{ asset('js/hero.js') }}" defer></script>
 </section>
 
-<a href="{{ path('shop_index') }}">
+<a href="{{ path('shop_odyssey') }}">
     {% include '_components/scrolling_text.html.twig' with {
     message: 'Nouveau look fashion Odyssey 🪐',
     messageColor: 'bg-dark'
     } %}
 </a>
+
+<section class="product-grid">
+    {% for product in products %}
+    {% include "_components/card.html.twig" %}
+    {% else %}
+    <p>Aucun produit disponible.</p>
+    {% endfor %}
+</section>
 
 {% endblock %}

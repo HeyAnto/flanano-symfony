@@ -5,21 +5,18 @@
 {% block main %}
 <section class="category-container flex flex-column align-item-center">
     <div class="flex flex-column gap-10">
-        <h2>Tous les produits exceptionnels de
+        <h2>{{ title }}
             <span>
                 <img src="{{ asset('logo.svg') }}" alt="Logo Flanano">
             </span>
         </h2>
-        <p>Découvrez l’univers de Flanano,
-            où l’élégance et le style se rencontrent pour sublimer votre quotidien.
-            Chaque produit est choisi avec soin pour vous offrir le meilleur de la mode et de la beauté ✨
-        </p>
+        <p>{{ description }}</p>
     </div>
 </section>
 
-<a href="{{ path('shop_index') }}">
+<a href="{{ path('shop_product_show', {'id' : 3}) }}">
     {% include '_components/scrolling_text.html.twig' with {
-    message: 'Nouveau makeup Flavedo & Albedo !',
+    message: 'Nouveau eyeliner Flavedo & Albedo !',
     messageColor: 'bg-yellow'
     } %}
 </a>

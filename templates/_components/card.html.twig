@@ -1,9 +1,9 @@
-<a href="">
+<a href="{{ path('shop_product_show', { 'id': product.id }) }}">
     <div class="card">
         <img src="{{ asset(product.cover) }}" alt="{{ product.title }}">
         <div class="card-content">
             <p>{{ product.title }}</p>
-            <p><strong>{{ product.priceTTC }}</strong></p>
+            <p><strong>€ {{ product.getPriceTTC()|number_format(2, '.', ' ') }}</strong></p>
         </div>
     </div>
 </a>
