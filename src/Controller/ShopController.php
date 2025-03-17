@@ -78,13 +78,21 @@ final class ShopController extends AbstractController
         ]);
     }
 
-    #[Route('/product/{id}', name: 'shop_product_show')]
-    public function show(ProductRepository $productRepository, int $id): Response
+    #[Route('/product/{id}/{categoryId}', name: 'shop_product_show')]
+    public function show(ProductRepository $productRepository, int $id, int $categoryId): Response
     {
+        $productLimit = 4;
+
         $product = $productRepository->find($id);
+        $products = $productRepository->findBy(
+            ['category' => $categoryId],
+            null,
+            $productLimit,
+        );
 
         return $this->render('shop/show.html.twig', [
-            'product' => $product
+            'product' => $product,
+            'products' => $products,
         ]);
     }
 }

@@ -69,4 +69,12 @@
 
     <script src="{{ asset('js/accordion.js') }}" defer></script>
 </section>
+
+<section class="product-grid">
+    {% for product in products %}
+    {% include "_components/card.html.twig" %}
+    {% else %}
+    <p>Aucun produit disponible.</p>
+    {% endfor %}
+</section>
 {% endblock %}
