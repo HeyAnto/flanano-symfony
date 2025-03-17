@@ -151,7 +151,6 @@ footer a:hover {
 
 .scrolling-content p {
   padding-right: 100px;
-  font-size: var(--font-size-h2);
 }
 
 @keyframes scroll {
@@ -261,7 +260,7 @@ footer a:hover {
 /* Button */
 .btn-add-cart {
   padding: 20px;
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h3);
   background-color: var(--color-dark);
   color: var(--color-white);
   border-radius: 100px;

@@ -57,6 +57,10 @@ h2 {
   font-size: var(--font-size-h2);
 }
 
+h3 {
+  font-size: var(--font-size-h3);
+}
+
 p {
   font-size: var(--font-size-p);
   font-weight: var(--font-weight-regular);
