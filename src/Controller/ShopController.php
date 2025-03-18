@@ -22,7 +22,7 @@ final class ShopController extends AbstractController
 
         return $this->render('shop/index.html.twig', [
             'products' => $products,
-            'title' => 'Tous les produits exceptionnels de Flanano',
+            'title' => 'Tous les produits exceptionnels de ',
             'description' => 'Découvrez l’univers de Flanano, où l’élégance et le style se rencontrent pour sublimer votre quotidien. Chaque produit est choisi avec soin pour vous offrir le meilleur de la mode et de la beauté ✨',
         ]);
     }

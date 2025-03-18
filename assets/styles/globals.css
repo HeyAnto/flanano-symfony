@@ -67,6 +67,10 @@ p {
   line-height: var(--line-height-p);
 }
 
+.p-alert {
+  color: var(--color-red);
+}
+
 /* Layout */
 * {
   margin: 0;
@@ -123,7 +127,7 @@ img {
 }
 
 button {
-  padding: 20px;
+  padding: 16px;
   background-color: var(--color-dark);
   color: var(--color-white);
   border: none;

@@ -1,9 +1,11 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Flanano - 404{% endblock %}
+
 {% block main %}
 <section class="notfound-container flex flex-column justify-center gap-10">
     <h1>Page introuvable</h1>
     <p>La page que vous recherchez n'existe pas</p>
-    <a href="{{ path('home_index') }}">Retour</a>
+    <a class="text-link" href="{{ path('home_index') }}">Retour</a>
 </section>
 {% endblock %}

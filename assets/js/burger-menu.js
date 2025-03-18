@@ -26,7 +26,7 @@ function initBurgerMenu() {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 768 && mainNav.classList.contains("open")) {
+    if (window.innerWidth > 900 && mainNav.classList.contains("open")) {
       resetMenu();
     }
   });

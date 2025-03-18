@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<section class="login-container flex flex-column justify-center gap-10">
+    <h1>Tableau de bord</h1>
+    <h2>Bienvenu {{ app.user.email }}</h2>
+    <a class="text-link" href="{{ path('app_logout') }}">Logout</a>
+</section>
+{% endblock %}
