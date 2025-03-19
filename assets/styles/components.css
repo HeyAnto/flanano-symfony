@@ -318,14 +318,12 @@ input:focus {
   font-size: var(--font-size-h3);
   background-color: var(--color-dark);
   color: var(--color-white);
-  border-radius: 100px;
   border: none;
   cursor: pointer;
 }
 
 .btn-add-cart:hover {
   opacity: 0.9;
-  color: var(--color-purple);
   transform: scale(1.01);
 }
 
