@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Flanano - Admin{% endblock %}
+
+{% block main %}
+<h1>Détails de la Catégorie</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <td>{{ category.id }}</td>
+    </tr>
+    <tr>
+        <th>Nom</th>
+        <td>{{ category.name }}</td>
+    </tr>
+</table>
+
+<br>
+<a href="{{ path('admin_category_index') }}">Retour à la liste</a>
+{% endblock %}
