@@ -1,0 +1,23 @@
+<header class="sidebar">
+    <nav>
+        <div class="sidebar-head">
+            <img src="{{ asset('logo.svg') }}" alt="Logo Flanano">
+            <p class="p-min">Admin</p>
+        </div>
+
+        <a href="{{ path('admin_index') }}"
+            class="{{ app.request.attributes.get('_route') == 'admin_index' ? 'active' : '' }}">
+            <div class="btn-nav {{ app.request.attributes.get('_route') == 'admin_index' ? 'btn-nav-active' : '' }}">
+                <p>Accueil</p>
+            </div>
+        </a>
+
+        <a href="{{ path('admin_category_index') }}"
+            class="{{ app.request.attributes.get('_route') == 'admin_category_index' ? 'active' : '' }}">
+            <div
+                class="btn-nav {{ app.request.attributes.get('_route') == 'admin_category_index' ? 'btn-nav-active' : '' }}">
+                <p>Categories</p>
+            </div>
+        </a>
+    </nav>
+</header>

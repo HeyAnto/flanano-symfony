@@ -1,0 +1,20 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block dashboard %}
+<section class="gap-40">
+    <h1>Détails de la Catégorie</h1>
+
+    <a class="btn-primary" href="{{ path('admin_category_index') }}">Retour à la liste</a>
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <td>{{ category.id }}</td>
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <td>{{ category.name }}</td>
+        </tr>
+    </table>
+</section>
+{% endblock %}

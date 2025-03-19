@@ -31,20 +31,20 @@
                     {% if app.user %}
                     <a href="{{ path('app_account') }}"
                         class="nav-link {{ app.request.attributes.get('_route') == 'app_account' ? 'active' : '' }}">
-                        Account
+                        Compte
                     </a>
 
                     {% if is_granted('ROLE_ADMIN') %}
                     <a href="{{ path('admin_index') }}"
                         class="nav-link {{ app.request.attributes.get('_route') == 'admin_index' ? 'active' : '' }}">
-                        Admin Panel
+                        Back-office
                     </a>
                     {% endif %}
 
                     {% else %}
                     <a href="{{ path('app_login') }}"
                         class="nav-link {{ app.request.attributes.get('_route') == 'app_login' ? 'active' : '' }}">
-                        Login
+                        Se connecter
                     </a>
                     {% endif %}
                 </div>

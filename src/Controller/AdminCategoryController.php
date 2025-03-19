@@ -18,7 +18,7 @@ final class AdminCategoryController extends AbstractController
     {
         $categories = $categoryRepository->findAll();
 
-        return $this->render('admin_category/index.html.twig', [
+        return $this->render('admin/admin_category/index.html.twig', [
             'categories' => $categories,
         ]);
     }
@@ -28,7 +28,7 @@ final class AdminCategoryController extends AbstractController
     {
         $category = $categoryRepository->find($id);
 
-        return $this->render('admin_category/show.html.twig', [
+        return $this->render('admin/admin_category/show.html.twig', [
             'category' => $category,
         ]);
     }

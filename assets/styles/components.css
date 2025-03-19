@@ -304,11 +304,26 @@ input:focus {
 /* Button */
 .btn-primary {
   padding: 12px;
+  color: var(--color-white);
+  background-color: var(--color-dark);
   border: none;
   cursor: pointer;
 }
 
 .btn-primary:hover {
+  opacity: 0.9;
+  transform: scale(1.01);
+}
+
+.btn-logout {
+  padding: 12px;
+  border: none;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  cursor: pointer;
+}
+
+.btn-logout:hover {
   opacity: 0.9;
   transform: scale(1.01);
 }

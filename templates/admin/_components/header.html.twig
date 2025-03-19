@@ -1,0 +1,14 @@
+<header class="header flex justify-between">
+    <div class="flex flex-column">
+        <h3>Bienvenue,</h3>
+        <p>{{ app.user.email }} !</p>
+    </div>
+    <div class="flex gap-10">
+        <a class="btn-primary" href="{{ path('home_index') }}">
+            Retour
+        </a>
+        <a class="btn-logout" href="{{ path('app_logout') }}">
+            Déconnexion
+        </a>
+    </div>
+</header>

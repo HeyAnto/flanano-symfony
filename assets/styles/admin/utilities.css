@@ -1,0 +1,97 @@
+/* Flexbox */
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Gap */
+.gap-10 {
+  gap: 0.625rem;
+}
+
+.gap-20 {
+  gap: 1.25rem;
+}
+
+.gap-40 {
+  gap: 2.5rem;
+}
+
+.gap-50 {
+  gap: 3.125rem;
+}
+
+.gap-100 {
+  gap: 6.25rem;
+}
+
+.gap-200 {
+  gap: 12.5rem;
+}
+
+/* Justify */
+.justify-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Align */
+.align-item-center {
+  align-items: center;
+}
+
+/* BG Color */
+.bg-dark {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.bg-purple {
+  background-color: var(--color-purple);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.bg-red {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.bg-green {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.bg-pink {
+  background-color: var(--color-pink);
+}
+
+/* Media Query */
+@media screen and (min-width: 2560px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 425px) {
+}
