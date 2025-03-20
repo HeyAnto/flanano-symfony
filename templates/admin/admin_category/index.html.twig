@@ -4,6 +4,8 @@
 <section class="gap-40">
     <h1>Liste des Catégories</h1>
 
+    <a class="btn btn-add" href="{{ path('admin_category_add', {name: 'toto'}) }}">Ajouter une catégorie</a>
+
     <table class="table">
         <thead>
             <tr>
@@ -18,7 +20,17 @@
                 <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
                 <td>
-                    <a href="{{ path('admin_category_show', { id: category.id }) }}">Voir</a>
+                    <a class="icon-action" href="{{ path('admin_category_show', { id: category.id }) }}">
+                        <img src="{{ asset('icons/icon-view.svg') }}" alt="View">
+                    </a>
+
+                    <a class="icon-action" href="{{ path('admin_category_edit', { id: category.id, name: 'pipou' }) }}">
+                        <img src="{{ asset('icons/icon-edit.svg') }}" alt="Edit">
+                    </a>
+
+                    <a class="icon-action" href="{{ path('admin_category_delete', { id: category.id }) }}">
+                        <img src="{{ asset('icons/icon-delete.svg') }}" alt="Delete">
+                    </a>
                 </td>
             </tr>
             {% endfor %}

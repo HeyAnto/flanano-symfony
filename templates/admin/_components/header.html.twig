@@ -3,12 +3,17 @@
         <h3>Bienvenue,</h3>
         <p>{{ app.user.email }} !</p>
     </div>
-    <div class="flex gap-10">
-        <a class="btn-primary" href="{{ path('home_index') }}">
+
+    <div class="desktop-nav flex gap-10">
+        <a class="btn btn-primary" href="{{ path('home_index') }}">
             Retour
         </a>
-        <a class="btn-logout" href="{{ path('app_logout') }}">
+        <a class="btn btn-logout" href="{{ path('app_logout') }}">
             Déconnexion
         </a>
     </div>
+
+    <button id="admin-burger-btn" class="burger-btn" aria-label="Menu" type="button">
+        <img src="{{ asset('icons/icon-burger.svg') }}" alt="Menu">
+    </button>
 </header>

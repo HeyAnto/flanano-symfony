@@ -16,6 +16,7 @@ final class ShopController extends AbstractController
     {
         $products = $productRepository->findAll();
 
+        // Les produits sont triés par ordre alphabétique du nom de leur catégorie.
         usort($products, function ($a, $b) {
             return $a->getCategory()->getName() <=> $b->getCategory()->getName();
         });
@@ -84,10 +85,10 @@ final class ShopController extends AbstractController
         ]);
     }
 
-    #[Route('/product/{id}/{categoryId}', name: 'shop_product_show')]
-    public function show(ProductRepository $productRepository, int $id = null, int $categoryId = null): Response
+    #[Route('/product/{id?0}/{categoryId?0}', name: 'shop_product_show', requirements: ['id' => '\d+', 'categoryId' => '\d+'])]
+    public function show(ProductRepository $productRepository, int $id, int $categoryId): Response
     {
-        if ($id === null || $categoryId === null) {
+        if ($id === 0 || $categoryId === 0) {
             return $this->redirectToRoute('home_404');
         }
 
@@ -101,8 +102,8 @@ final class ShopController extends AbstractController
             ['category' => $categoryId],
         );
 
+        // Garder uniquement les produits dont l'ID est différent du produit afficher
         $products = array_filter($products, fn($p) => $p->getId() !== $id);
-
         shuffle($products);
 
         $productLimit = 4;

@@ -45,8 +45,8 @@ final class AdminCategoryController extends AbstractController
         return $this->redirectToRoute('admin_category_index');
     }
 
-    #[Route('/{id}/{label}', name: 'admin_category_edit')]
-    public function edit(CategoryRepository $categoryRepository, EntityManagerInterface $entityManager, int $id, string $label): Response
+    #[Route('/edit/{id}/{name}', name: 'admin_category_edit')]
+    public function edit(CategoryRepository $categoryRepository, EntityManagerInterface $entityManager, int $id, string $name): Response
     {
         $category = $categoryRepository->find($id);
 
@@ -54,7 +54,7 @@ final class AdminCategoryController extends AbstractController
             return new Response("Catégorie non trouvée", 404);
         }
 
-        $category->setName($label);
+        $category->setName($name);
         $entityManager->flush();
 
         return $this->redirectToRoute('admin_category_index');
