@@ -2,45 +2,28 @@
 
 {% block main %}
 <section class="login-container flex flex-column justify-center gap-10">
-    <form class="flex flex-column gap-10" method="post">
+    {{ form_start(registrationForm) }}
+
+    <div>
         <h1>Inscrivez-vous</h1>
         <p>Déjà un compte ? <a class="text-link" href="{{ path('app_login') }}">Connectez-vous</a> !</p>
+    </div>
 
-        {{ form_start(registrationForm) }}
+    {{ form_errors(registrationForm) }}
 
-        <label for="inputEmail">Email</label>
-        {{ form_widget(registrationForm.email, {
-        'attr': {
-        'id': 'inputEmail',
-        'class': 'form-control',
-        'type': 'email',
-        'autocomplete': 'email',
-        'required': true
-        }
-        }) }}
-        {{ form_errors(registrationForm.email) }}
 
-        <label for="inputPassword">Mot de passe</label>
-        {{ form_widget(registrationForm.plainPassword, {
-        'attr': {
-        'id': 'inputPassword',
-        'class': 'form-control',
-        'autocomplete': 'new-password',
-        'required': true
-        }
-        }) }}
-        {{ form_errors(registrationForm.plainPassword) }}
+    {{ form_row(registrationForm.email) }}
 
-        <div>
-            <label>
-                {{ form_widget(registrationForm.agreeTerms) }} J'accepte les termes et conditions
-            </label>
-            {{ form_errors(registrationForm.agreeTerms) }}
-        </div>
+    {{ form_row(registrationForm.plainPassword,
+    { label: 'Password' }) }}
 
-        <button class="btn-primary" type="submit">Inscription</button>
+    <div class="flex-row">
+        {{ form_widget(registrationForm.agreeTerms) }}
+        {{ form_label(registrationForm.agreeTerms) }}
+    </div>
 
-        {{ form_end(registrationForm) }}
-    </form>
+    <button class="btn-primary" type="submit">Inscription</button>
+
+    {{ form_end(registrationForm) }}
 </section>
 {% endblock %}

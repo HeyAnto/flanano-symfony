@@ -40,7 +40,10 @@ final class AdminCategoryController extends AbstractController
     {
         $category = new Category();
 
-        $form = $this->createForm(CategoryFormType::class, $category);
+        $form = $this->createForm(CategoryFormType::class, $category, [
+            'csrf_token_id' => 'edit_category_' . $category->getId(),
+        ]);
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -63,7 +66,10 @@ final class AdminCategoryController extends AbstractController
             return new Response("Catégorie non trouvée", 404);
         }
 
-        $form = $this->createForm(CategoryFormType::class, $category);
+        $form = $this->createForm(CategoryFormType::class, $category, [
+            'csrf_token_id' => 'edit_category_' . $category->getId(),
+        ]);
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

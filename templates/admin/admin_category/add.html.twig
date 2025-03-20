@@ -6,9 +6,11 @@
     <h1>Ajouter une Catégorie</h1>
 
     {{ form_start(form) }}
-    {{ form_row(form.name) }}
+
+    {{ form_widget(form) }}
 
     <button class="btn btn-add" type="submit">Ajouter</button>
+
     {{ form_end(form) }}
 </section>
 {% endblock %}

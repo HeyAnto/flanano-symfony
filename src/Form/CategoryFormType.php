@@ -19,7 +19,7 @@ class CategoryFormType extends AbstractType
                 'attr' => [
                     'autocomplete' => 'off',
                 ],
-            ]);;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

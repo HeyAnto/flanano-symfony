@@ -265,9 +265,19 @@ footer a:hover {
   border-bottom: solid 1px var(--color-text-grey);
 }
 
+/* Form */
 form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
   width: 100%;
   max-width: 500px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
 }
 
 input {
