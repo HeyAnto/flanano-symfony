@@ -9,7 +9,6 @@
     <table class="table">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nom de la Catégorie</th>
                 <th>Actions</th>
             </tr>
@@ -17,7 +16,6 @@
         <tbody>
             {% for category in categories %}
             <tr>
-                <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
                 <td>
                     <a class="icon-action" href="{{ path('admin_category_show', { id: category.id }) }}">
