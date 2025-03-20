@@ -33,16 +33,18 @@ final class AdminCategoryController extends AbstractController
         ]);
     }
 
-    #[Route('/add/{name}', name: 'admin_category_add')]
-    public function add(EntityManagerInterface $entityManager, string $name): Response
+    #[Route('/add/category', name: 'admin_category_add')]
+    public function add(EntityManagerInterface $entityManager): Response
     {
-        $category = new Category();
-        $category->setName($name);
+        // $category = new Category();
+        // $category->setName($name);
 
-        $entityManager->persist($category);
-        $entityManager->flush();
+        // $entityManager->persist($category);
+        // $entityManager->flush();
 
-        return $this->redirectToRoute('admin_category_index');
+        return $this->render('admin/admin_category/add.html.twig', [
+            // 'category' => $category,
+        ]);
     }
 
     #[Route('/edit/{id}/{name}', name: 'admin_category_edit')]

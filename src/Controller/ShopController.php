@@ -107,6 +107,8 @@ final class ShopController extends AbstractController
         shuffle($products);
 
         $productLimit = 4;
+
+        // Extrait les 4 premiers éléments du tableau mélangé
         $products = array_slice($products, 0, $productLimit);
 
         return $this->render('shop/show.html.twig', [
