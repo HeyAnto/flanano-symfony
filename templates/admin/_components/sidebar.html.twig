@@ -32,19 +32,19 @@
             </div>
         </a>
 
-        <a href="{{ path('admin_category_index') }}"
-            class="{{ app.request.attributes.get('_route') == 'admin_category_index' ? 'active' : '' }}">
-            <div
-                class="btn-nav {{ app.request.attributes.get('_route') == 'admin_category_index' ? 'btn-nav-active' : '' }}">
-                <p>Catégories</p>
-            </div>
-        </a>
-
         <a href="{{ path('admin_product_index') }}"
             class="{{ app.request.attributes.get('_route') == 'admin_product_index' ? 'active' : '' }}">
             <div
                 class="btn-nav {{ app.request.attributes.get('_route') == 'admin_product_index' ? 'btn-nav-active' : '' }}">
                 <p>Produits</p>
+            </div>
+        </a>
+
+        <a href="{{ path('admin_category_index') }}"
+            class="{{ app.request.attributes.get('_route') == 'admin_category_index' ? 'active' : '' }}">
+            <div
+                class="btn-nav {{ app.request.attributes.get('_route') == 'admin_category_index' ? 'btn-nav-active' : '' }}">
+                <p>Catégories</p>
             </div>
         </a>
     </nav>

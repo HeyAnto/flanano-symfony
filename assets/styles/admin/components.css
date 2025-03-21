@@ -153,6 +153,11 @@ form div {
   gap: 0.3125rem;
 }
 
+.form-img {
+  padding: 10px 15px;
+  border: 1px solid var(--color-dark);
+}
+
 input {
   padding: 10px 15px;
   border: 1px solid var(--color-grey);
