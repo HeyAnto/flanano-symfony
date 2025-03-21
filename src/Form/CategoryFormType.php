@@ -14,7 +14,7 @@ class CategoryFormType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => "Nom de la catégorie",
+                'label' => "Nom",
                 'required' => true,
                 'attr' => [
                     'autocomplete' => 'off',

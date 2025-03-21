@@ -7,13 +7,13 @@
     <a class="btn btn-primary" href="{{ path('admin_category_index') }}">Retour à la liste</a>
 
     <table class="table">
-        <thead>
-            <th>ID</th>
-            <th>Nom de la Catégorie</th>
-        </thead>
         <tbody>
             <tr>
+                <th>ID</th>
                 <td>{{ category.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
                 <td>{{ category.name }}</td>
             </tr>
         </tbody>

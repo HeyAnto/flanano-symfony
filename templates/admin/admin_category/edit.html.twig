@@ -3,13 +3,13 @@
 {% block dashboard %}
 <section class="gap-40">
     <a class="btn btn-primary" href="{{ path('admin_category_index') }}">Retour</a>
-    <h1>Modifier la Catégorie {{ category.name }}</h1>
+    <h1>Modifier la Catégorie : {{ category.name }}</h1>
 
     {{ form_start(form) }}
 
     {{ form_widget(form) }}
 
-    <button class="btn btn-add" type="submit">Soumettre</button>
+    <button class="btn btn-add" type="submit">Modifier</button>
 
     {{ form_end(form) }}
 </section>
