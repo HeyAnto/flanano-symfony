@@ -84,7 +84,7 @@ final class AdminCategoryController extends AbstractController
         ]);
     }
 
-    #[Route('/delete/{id}', name: 'admin_category_delete')]
+    #[Route('/delete/category/{id}', name: 'admin_category_delete')]
     public function delete(CategoryRepository $categoryRepository, EntityManagerInterface $entityManager, int $id): Response
     {
         $category = $categoryRepository->find($id);
