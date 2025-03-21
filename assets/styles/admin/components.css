@@ -222,12 +222,12 @@ select:focus {
   background-color: var(--color-dark);
 }
 
-.btn-add {
+.btn-green {
   color: var(--color-white);
   background-color: var(--color-green);
 }
 
-.btn-logout {
+.btn-red {
   color: var(--color-white);
   background-color: var(--color-red);
 }
