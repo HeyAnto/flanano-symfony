@@ -1,0 +1,53 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block dashboard %}
+<section class="gap-40">
+    <h1>Détails du Produit</h1>
+
+    <a class="btn btn-primary" href="{{ path('admin_product_index') }}">Retour à la liste</a>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <td>{{ product.id }}</td>
+            </tr>
+
+            <tr>
+                <th>Titre</th>
+                <td>{{ product.title }}</td>
+            </tr>
+
+            <tr>
+                <th>Description</th>
+                <td>{{ product.description }}</td>
+            </tr>
+
+            <tr>
+                <th>Prix HT</th>
+                <td>€ {{ product.priceht|number_format(2, '.', ' ') }}</td>
+            </tr>
+
+            <tr>
+                <th>Prix TTC</th>
+                <td>€ {{ product.getPriceTTC()|number_format(2, '.', ' ') }}</td>
+            </tr>
+
+            <tr>
+                <th>Catégorie</th>
+                <td>{{ product.category.name }}</td>
+            </tr>
+
+            <tr>
+                <th>URL image de couverture</th>
+                <td>{{ product.cover }}</td>
+            </tr>
+
+            <tr>
+                <th>Image de couverture</th>
+                <td><img src="{{ asset(product.cover) }}" alt="{{ product.title }}" width="300"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+{% endblock %}
