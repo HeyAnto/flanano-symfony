@@ -83,4 +83,19 @@ final class AdminProductController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
+    #[Route('/delete/product/{id}', name: 'admin_product_delete')]
+    public function delete(ProductRepository $productRepository, EntityManagerInterface $entityManager, int $id): Response
+    {
+        $product = $productRepository->find($id);
+
+        if (!$product) {
+            return new Response("Produit non trouvée", 404);
+        }
+
+        $entityManager->remove($product);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('admin_product_index');
+    }
 }

@@ -29,6 +29,10 @@
                     <a class="icon-action" href="{{ path('admin_product_edit', { id: product.id }) }}">
                         <img src="{{ asset('icons/icon-edit.svg') }}" alt="Edit">
                     </a>
+
+                    <a class="icon-action" href="{{ path('admin_product_delete', { id: product.id }) }}">
+                        <img src="{{ asset('icons/icon-delete.svg') }}" alt="Delete">
+                    </a>
                 </td>
             </tr>
             {% endfor %}
