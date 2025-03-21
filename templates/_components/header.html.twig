@@ -35,8 +35,8 @@
                     </a>
 
                     {% if is_granted('ROLE_ADMIN') %}
-                    <a href="{{ path('admin_index') }}"
-                        class="nav-link {{ app.request.attributes.get('_route') == 'admin_index' ? 'active' : '' }}">
+                    <a href="{{ path('admin_product_index') }}"
+                        class="nav-link {{ app.request.attributes.get('_route') == 'admin_product_index' ? 'active' : '' }}">
                         Back-office
                     </a>
                     {% endif %}

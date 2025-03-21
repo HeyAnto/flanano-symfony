@@ -25,13 +25,6 @@
             </a>
         </div>
 
-        <a href="{{ path('admin_index') }}"
-            class="{{ app.request.attributes.get('_route') == 'admin_index' ? 'active' : '' }}">
-            <div class="btn-nav {{ app.request.attributes.get('_route') == 'admin_index' ? 'btn-nav-active' : '' }}">
-                <p>Accueil</p>
-            </div>
-        </a>
-
         <a href="{{ path('admin_product_index') }}"
             class="{{ app.request.attributes.get('_route') == 'admin_product_index' ? 'active' : '' }}">
             <div
