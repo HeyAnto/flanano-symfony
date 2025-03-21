@@ -2,9 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Category;
+use App\Entity\Product;
 use App\Form\ProductFormType;
-use App\Form\CategoryFormType;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,27 +34,27 @@ final class AdminProductController extends AbstractController
         ]);
     }
 
-    // #[Route('/add/category', name: 'admin_category_add')]
-    // public function add(EntityManagerInterface $entityManager, Request $request): Response
-    // {
-    //     $category = new Category();
+    #[Route('/add/product', name: 'admin_product_add')]
+    public function add(EntityManagerInterface $entityManager, Request $request): Response
+    {
+        $product = new Product();
 
-    //     $form = $this->createForm(CategoryFormType::class, $category, [
-    //         'csrf_token_id' => 'edit_category_' . $category->getId(),
-    //     ]);
+        $form = $this->createForm(ProductFormType::class, $product, [
+            'csrf_token_id' => 'edit_product_' . $product->getId(),
+        ]);
 
-    //     $form->handleRequest($request);
+        $form->handleRequest($request);
 
-    //     if ($form->isSubmitted() && $form->isValid()) {
-    //         $entityManager->persist($category);
-    //         $entityManager->flush();
-    //         return $this->redirectToRoute('admin_category_index');
-    //     }
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($product);
+            $entityManager->flush();
+            return $this->redirectToRoute('admin_product_index');
+        }
 
-    //     return $this->render('admin/admin_category/add.html.twig', [
-    //         'form' => $form->createView(),
-    //     ]);
-    // }
+        return $this->render('admin/admin_product/add.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
 
     #[Route('/edit/product/{id}', name: 'admin_product_edit')]
     public function edit(int $id, ProductRepository $productRepository, EntityManagerInterface $entityManager, Request $request): Response

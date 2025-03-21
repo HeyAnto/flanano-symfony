@@ -39,7 +39,13 @@ class ProductFormType extends AbstractType
                 'class' => Category::class,
                 'choice_label' => 'name',
             ])
-            ->add('cover')
+            ->add('cover', TextType::class, [
+                'label' => "Image de couverture (URL)",
+                'required' => true,
+                'attr' => [
+                    'value' => 'images/default.webp',
+                ],
+            ])
         ;
     }
 
