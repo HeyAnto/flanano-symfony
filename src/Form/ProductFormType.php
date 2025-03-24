@@ -36,6 +36,9 @@ class ProductFormType extends AbstractType
             ->add('priceHT', NumberType::class, [
                 'label' => "Prix HT du produit",
                 'required' => true,
+                'attr' => [
+                    'autocomplete' => 'off',
+                ],
             ])
             ->add('category', EntityType::class, [
                 'class' => Category::class,
