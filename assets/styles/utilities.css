@@ -152,6 +152,11 @@
     border-bottom: 1px solid var(--color-grey);
   }
 
+  /* Dropdown */
+  .dropdown {
+    display: none;
+  }
+
   /* Section Hero */
   .hero-container {
     grid-template-columns: 1fr;

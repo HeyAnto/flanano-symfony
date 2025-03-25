@@ -16,7 +16,7 @@ final class ShopController extends AbstractController
     {
         $products = $productRepository->findAll();
 
-        // Les produits sont triés par ordre alphabétique du nom de leur catégorie.
+        // Les produits sont triés par ordre alphabétique du nom de leur catégorie
         usort($products, function ($a, $b) {
             return $a->getCategory()->getName() <=> $b->getCategory()->getName();
         });

@@ -19,7 +19,7 @@ class AppTwigExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('function_name', [AppTwigExtensionRuntime::class, 'doSomething']),
+            new TwigFunction('getCategories', [AppTwigExtensionRuntime::class, 'getCategories']),
         ];
     }
 }
