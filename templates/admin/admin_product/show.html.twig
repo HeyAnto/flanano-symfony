@@ -32,12 +32,12 @@
 
             <tr>
                 <th>Prix HT</th>
-                <td>€ {{ product.priceht|number_format(2, '.', ' ') }}</td>
+                <td>{{ product.priceht|formatPrice }}</td>
             </tr>
 
             <tr>
                 <th>Prix TTC</th>
-                <td>€ {{ product.getPriceTTC()|number_format(2, '.', ' ') }}</td>
+                <td>{{ product.getPriceTTC()|formatPrice }}</td>
             </tr>
 
             <tr>

@@ -3,7 +3,7 @@
         <img src="{{ asset(product.cover) }}" alt="{{ product.title }}">
         <div class="card-content">
             <p>{{ product.title }}</p>
-            <p><strong>€ {{ product.getPriceTTC()|number_format(2, '.', ' ') }}</strong></p>
+            <p><strong>{{ product.getPriceTTC()|formatPrice }}</strong></p>
         </div>
     </div>
 </a>

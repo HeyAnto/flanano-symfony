@@ -9,7 +9,7 @@
         <div class="show-right-info flex flex-column gap-100">
             <div class="flex flex-column gap-20">
                 <h1>{{ product.title }}</h1>
-                <h2>€ {{ product.getPriceTTC()|number_format(2, '.', ' ') }} TTC</h2>
+                <h2>{{ product.getPriceTTC()|formatPrice }} TTC</h2>
             </div>
 
             <div class="flex flex-column gap-20">

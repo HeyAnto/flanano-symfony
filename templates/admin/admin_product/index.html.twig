@@ -20,8 +20,8 @@
             {% for product in products %}
             <tr>
                 <td>{{ product.title }}</td>
-                <td>€ {{ product.priceht|number_format(2, '.', ' ') }}</td>
-                <td>€ {{ product.getPriceTTC()|number_format(2, '.', ' ') }}</td>
+                <td>{{ product.priceht|formatPrice }}</td>
+                <td>{{ product.getPriceTTC()|formatPrice }}</td>
                 <td>{{ product.category.name }}</td>
                 <td>
                     <a class="icon-action" href="{{ path('admin_product_show', { id: product.id }) }}">
