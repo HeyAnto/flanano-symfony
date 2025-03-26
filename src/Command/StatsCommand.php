@@ -17,19 +17,12 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 )]
 class StatsCommand extends Command
 {
-    private UserRepository $userRepository;
-    private ProductRepository $productRepository;
-    private CategoryRepository $categoryRepository;
-
     public function __construct(
-        UserRepository $userRepository,
-        ProductRepository $productRepository,
-        CategoryRepository $categoryRepository
+        private UserRepository $userRepository,
+        private ProductRepository $productRepository,
+        private CategoryRepository $categoryRepository
     ) {
         parent::__construct();
-        $this->userRepository = $userRepository;
-        $this->productRepository = $productRepository;
-        $this->categoryRepository = $categoryRepository;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
