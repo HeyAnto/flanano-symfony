@@ -105,6 +105,11 @@ class Product
         return $this;
     }
 
+    public function getPriceTTC(): float
+    {
+        return $this->getPriceHT() * 1.20;
+    }
+
     public function getCreatedAt(): ?\DateTimeInterface
     {
         return $this->createdAt;
@@ -157,10 +162,5 @@ class Product
         }
 
         return $this;
-    }
-
-    public function getPriceTTC(): float
-    {
-        return $this->getPriceHT() * 1.20;
     }
 }

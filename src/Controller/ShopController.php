@@ -102,12 +102,12 @@ final class ShopController extends AbstractController
             ['category' => $categoryId],
         );
 
-        // Garder uniquement les produits dont l'ID est différent du produit afficher
-        $products = array_filter($products, fn($p) => $p->getId() !== $id);
-        shuffle($products);
-
         $productLimit = 4;
 
+        // Garder uniquement les produits dont l'ID est différent du produit afficher
+        $products = array_filter($products, fn($p) => $p->getId() !== $id);
+
+        shuffle($products);
         // Extrait les 4 premiers éléments du tableau mélangé
         $products = array_slice($products, 0, $productLimit);
 

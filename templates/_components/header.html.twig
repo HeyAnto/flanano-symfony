@@ -10,9 +10,22 @@
 
             <nav id="main-nav" class="flex justify-between gap-20">
                 <div class="flex gap-20">
-                    <a href="{{ path('shop_index') }}"
+                    {# <a href="{{ path('shop_index') }}"
                         class="nav-link {{ app.request.attributes.get('_route') == 'shop_index' ? 'active' : '' }}">
-                        Tout</a>
+                        Tout</a> #}
+
+                    <ul>
+                        <li class="dropdown">
+                            <a href="{{ path('shop_index') }}"
+                                class="nav-link {{ app.request.attributes.get('_route') == 'shop_index' ? 'active' : '' }}">
+                                Tout ▾</a>
+                            <ul class="dropdown-menu">
+                                {% for category in getCategories() %}
+                                <li><a class="nav-link" href="{{ path(category.route) }}">{{ category.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
 
                     <a href="{{ path('shop_makeup') }}"
                         class="nav-link {{ app.request.attributes.get('_route') == 'shop_makeup' ? 'active' : '' }}">
@@ -29,17 +42,6 @@
                     <a href="{{ path('shop_odyssey') }}"
                         class="nav-link {{ app.request.attributes.get('_route') == 'shop_odyssey' ? 'active' : '' }}">
                         Odyssey 25</a>
-
-                    <ul>
-                        <li class="dropdown">
-                            <a class="nav-link">Catégories</a>
-                            <ul class="dropdown-menu">
-                                {% for category in getCategories() %}
-                                <li><a class="nav-link" href="{{ path(category.route) }}">{{ category.name }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
 
                 <div class="account-links flex gap-20">
