@@ -53,7 +53,7 @@ class StatsCommand extends Command
 
         $io->section('Produits');
         $io->text("Nombre total de produits : $productCount");
-        $io->text(sprintf("Prix moyen des produits : %.2f €", $averagePrice));
+        $io->text(sprintf("Prix moyen des produits : %.2f € HT", $averagePrice));
 
         $io->section('Catégories de produits');
         $io->listing($categoryNames);
