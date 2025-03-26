@@ -46,7 +46,7 @@ class StatsCommand extends Command
         $totalPrice = array_sum(array_map(fn($product) => $product->getPriceHT(), $products));
         $averagePrice = $productCount > 0 ? $totalPrice / $productCount : 0;
 
-        // Résultats
+        // Affichage
         $io->title('Statistiques de Flanano');
         $io->section('Utilisateurs');
         $io->text("Nombre total d'utilisateurs : $userCount");
